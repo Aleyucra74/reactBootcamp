@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CardMusica from '../components/CardMusica';
 import NavBar from '../components/NavBar';
+import Button from '../components/Button';
 
 import api from '../api';
 
@@ -28,7 +29,7 @@ function MinhasMusicas() {
             <div className="container">
                 <div className="filter">
                     {/* adicionar button com filho, lado e destino aqui! */}
-                        <button className="btn-green right">Adicionar</button>
+                    <Button lado="right" destino="/add-musica">Adicionar</Button>
                     {/* adicionar button com filho, lado e destino aqui! */}
                 </div>
             </div>
@@ -38,7 +39,7 @@ function MinhasMusicas() {
 
                 {
                     musicas.map((musica) => (
-                        <CardMusica nome={musica.nome} genero={musica.genero} ano={musica.ano}/>
+                        <CardMusica url={musica.url} nome={musica.nome} genero={musica.genero} ano={musica.ano}/>
                     ))
                 }
 

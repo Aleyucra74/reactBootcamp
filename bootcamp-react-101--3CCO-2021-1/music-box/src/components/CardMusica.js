@@ -6,7 +6,7 @@ import starSolidIcon from '../assets/images/star-solid.png';
 function CardMusica(props) {
     return (
         <div className="music-box">
-                <div className="img-music"></div>
+                <div className="img-music"><img className="img-music" src={props.url} alt="sometext" /></div>
                 <div className="music-data">
                     <div className="icons">
                         <img src={editIcon} alt="" className="edit" />
